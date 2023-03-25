@@ -9,6 +9,12 @@ import pickle
 import numpy as np
 import streamlit as st
 from streamlit_option_menu import option_menu
+from pathlib import Path 
+here = Path(__file__).parent
+
+diabetes_model = pickle.load(open(here / 'diabetes_model.sav','rb'))
+
+heart_disease_model = pickle.load(open(here / 'trained_model.sav','rb'))
 
 diabetes_model = pickle.load(open('diabetes_model.sav','rb'))
 
